@@ -113,7 +113,7 @@ export default class addAttraction extends Component {
       // likes: this.state.likes
     }
     console.log(attraction)
-    axios.post(BACKEND_URL + 'add', attraction)
+    axios.post(BACKEND_URL + 'attractions/add', attraction)
     .then((res)=>{
       console.log(res.data)
     })
