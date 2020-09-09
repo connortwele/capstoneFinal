@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import './style/contact.css'
-import  Navbar  from "./navigationbar"
-import clock from '../assets/utone.jpg'
+import axios from 'axios'
 export default class contact extends Component {
   constructor (props){
     super(props)
@@ -55,61 +52,54 @@ export default class contact extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
-      <div className="contactContainerReturn">
-          <h3 className='text-center'>Contact Us</h3>
-          <div className="containerContact">
-            <div className="contentContact">
-            <form onSubmit={this.onSubmit}>
-              <div className="form-group">
-                <label>Name: </label>
-                <input
-                  type="text"
-                  required
-                  className="form-control"
-                  value={this.state.name}
-                  onChange={this.onChangeName}
-                  >
-                  </input>
-              </div>
-              <div className="form-group">
-                  <label>Email:</label>
-                  <input
-                  type="email"
-                  required
-                  className="form-control"
-                  value={this.state.email}
-                  onChange={this.onChangeEmail}
-                  >
-                  </input>
-              </div>
-              <div className="form-group">
-                <label>Questions and Comments:</label>
-                  <textarea
-                  type="text"
-                  className="form-control"
-                  value={this.state.question}
-                  onChange={this.onChangeQuestion}
-                  rows='5'
-                  cols='10'
-                  >
-                  </textarea>
-              </div>
-              <div className="form-group">
-                  <input
-                  type="submit"
-                  value="Send"
-                  className="btn btn-primary"
-                  />
-              </div>
-            </form>
-            </div>
-            <div className="content">
-              <img className="contactClock" src={clock}></img>
-            </div>
+        <h3>Contact Us</h3>
+        <form onSubmit={this.onSubmit}>
+          <div className="form-group">
+            <label>Name: </label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              value={this.state.name}
+              onChange={this.onChangeName}
+              >
+              </input>
           </div>
-      </div>
+          <div className="form-group">
+              <label>Email</label>
+              <input
+              type="email"
+              required
+              className="form-control"
+              value={this.state.email}
+              onChange={this.onChangeEmail}
+              >
+              </input>
+          </div>
+          <div className="form-group">
+            <label>Questions and Comments</label>
+              <input
+              type="text"
+              className="form-control"
+              value={this.state.question}
+              onChange={this.onChangeQuestion}
+              >
+              </input>
+          </div>
+          <div className="form-group">
+              <input
+              type="submit"
+              value="Create Attraction Log"
+              className="btn btn-primary"
+              />
+          </div>
+        </form>
       </div>
     )
   }
 }
+
+
+
+
+

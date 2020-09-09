@@ -17,14 +17,13 @@ import  Jumbotron  from './components/jumbotron';
 import  Footer from "./components/Footer"
 
 
+
 export default class App extends Component {
   render() {
     return(
     <React.Fragment>
       
-      <Router>
-       <Navbar />
-       {/* <Jumbotron /> */}
+      <Router>      
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
@@ -33,7 +32,6 @@ export default class App extends Component {
             <Route path="/add" exact component={Addattractions} />
             <Route path="/blog" component={Blog} />
             <Route path="/attractions/:id" exact component={singleAttraction} />
-
             <Route component={NoMatch} />
           </Switch>
         <Footer/>

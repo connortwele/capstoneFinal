@@ -1,7 +1,5 @@
 body {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    
-
   }
   
   h1,
@@ -11,44 +9,45 @@ body {
   h5,
   h6 {
     font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   
+    font-weight: 700;
   }
 
-  .toplogo{
-      font-size: 3rem !important;
-      text-shadow: 3px 3px rgb(0, 0, 0);
-
-      /* text-align: center; */
-      /* padding-top: 
-      5%; */
-      
+  h1{
+      font-size: 30px !important;
   }
-
-  .littlelogo{
-    font-size: 2.8rem;
-  }
-
   
   header.masthead {
     position: relative;
-    background: url("./assets/sky14.jpg") no-repeat center center;
-    background-attachment:fixed;
+    background-color: #343a40;
+    background: url("./assets/sky1.jpg") no-repeat center center;
     background-size: cover;
-    /* padding-top: 8rem;
-    padding-bottom: 8rem; */
-    height: 700px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    height: 550px;
   }
-
+  
+  header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  
+  header.masthead h1 {
+    font-size: 2rem;
+  }
   
   @media (min-width: 768px) {
     header.masthead {
-      padding-top: 8rem;
-      /* padding-bottom: 12rem; */
+      padding-top: 12rem;
+      padding-bottom: 12rem;
     }
     header.masthead h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
-  
   }
   
   .showcase .showcase-text {
@@ -104,52 +103,35 @@ body {
   .call-to-action {
     position: relative;
     background-color: #343a40;
-    background: url("./assets/skyline6.jpg") no-repeat center center;
+    background: url("./assets/8.jpg") no-repeat center center;
     background-size: cover;
     padding-top: 7rem;
     padding-bottom: 7rem;
-    background-attachment:fixed;
-     height: 800px;
   }
   
+  .call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  
+  footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 
   .imga{
-    background:url("./assets/kable3.jpg");
-  }
-  .imgb{
     background:url("./assets/bg-showcase-1.jpg");
   }
+  .imgb{
+    background:url("./assets/bg-showcase-2.jpg");
+  }
   .imgc{
-    background:url("./assets/window2.jpg");
-    /* height: 400px;
-    width: 900px; */
+    background:url("./assets/bg-showcase-3.jpg");
+    height: 600px;
+    width: 900px;
   }
-  .topcolor{
-    background-color:rgb(223, 229, 241) ;
-  }
-
-  @media screen and (max-width: 450px){
-
-    .toplogo{
-      margin-top: 48%;
-      
-    }
-    header.masthead h1 {
-      font-size: 2.1rem;
-    }
-
-    .littlelogo{
-      font-size: 1.5rem;
-    }
-  }
-
-  .lead{
-    font-weight: 500;
-  }
-
-  .headers {
-    text-decoration: underline;
-  }
-
-
-  

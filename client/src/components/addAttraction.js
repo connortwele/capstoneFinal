@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import "bootstrap/dist/css/bootstrap.min.css";
+import  Navbar  from "./navigationbar"
+import './style/addAttraction.css'
 export default class addAttraction extends Component {
   constructor (props){
     super(props)
@@ -27,7 +30,7 @@ export default class addAttraction extends Component {
         },
         indoors: 0,
         kidFriendly: 0,
-        likes: 1
+        // likes: 1
       }
     }
   onChangeName(e){
@@ -106,7 +109,7 @@ export default class addAttraction extends Component {
       ,
       indoors: this.state.indoors,
       kidFriendly: this.state.kidFriendly,
-      likes: this.state.likes
+      // likes: this.state.likes
     }
     console.log(attraction)
     axios.post('http://localhost:5000/attractions/add', attraction)
@@ -120,7 +123,9 @@ export default class addAttraction extends Component {
   render() {
     return (
       <div>
-        <h3>Add Your Favorite Attraction</h3>
+        <Navbar/>
+      <div className="containerAdd">
+        <h3 className="text-center">Add Your Favorite Attraction</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Name: </label>
@@ -235,11 +240,12 @@ export default class addAttraction extends Component {
           <div className="form-group">
               <input
               type="submit"
-              value="Create Attraction Log"
+              value="Add Attraction"
               className="btn btn-primary"
               />
           </div>
         </form>
+      </div>
       </div>
     )
   }

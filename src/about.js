@@ -3,43 +3,54 @@ import { Component } from 'react'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "./components/carousel";
-import  Navbar  from "./components/navigationbar"
 
 
 import './about.css';
 import ten from './assets/10.jpg';
-import eleven from './assets/connor.jpg';
-import twelve from './assets/js.jpg';
-import  Tnavbar from "./components/transnav"
+import eleven from './assets/11.jpg';
+import twelve from './assets/12.jpg';
 
 
 export default class about extends Component {
     render() {
         return (
  <div>          
-  <Tnavbar />
- 
+ <Carousel/>
 
   <header class="masthead text-white text-center">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-xl-9 ml-auto mr-auto  toplogo">
-          <h1 class="">The Kable Academy @<br/>The University of Cincinnati <br/>1891 Innovation Hub</h1>
-          <h2 class="littlelogo">"Where Next Happens"</h2>
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">Hey Philicia this is your new about page, everything must be filled in!</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                {/* <input type="email" class="form-control form-control-lg" placeholder="Enter your email..."/> */}
+              </div>
+              <div class="col-12 col-md-3">
+                {/* <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button> */}
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </header>
 
  
-  <section class="features-icons topcolor text-center">
+  <section class="features-icons bg-light text-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <h3 class="headers" >The Kable Academy </h3>
-            <p class="lead mb-0">Accelerated Technical Training in Web Development and Internet Security.</p>
+            {/* <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div> */}
+            <h3>Fully Responsive</h3>
+            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -47,8 +58,8 @@ export default class about extends Component {
             {/* <div class="features-icons-icon d-flex">
               <i class="icon-layers m-auto text-primary"></i>
             </div> */}
-            <h3 class="headers" >1819 Innovation Center </h3>
-            <p class="lead mb-0">The University of Cincinnati's Cornverstone Technology Incubator. Where Next Happens. </p>
+            <h3>Bootstrap 4 Ready</h3>
+            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -56,8 +67,8 @@ export default class about extends Component {
             {/* <div class="features-icons-icon d-flex">
               <i class="icon-check m-auto text-primary"></i>
             </div> */}
-            <h3 class="headers" >The Technology Gap</h3>
-            <p class="lead mb-0">both working together to Produce quality technology workers in order to fill Ohio's technology gap!</p>
+            <h3>Easy to Use</h3>
+            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
           </div>
         </div>
       </div>
@@ -71,22 +82,22 @@ export default class about extends Component {
 
         <div class="col-lg-6 order-lg-2 text-white showcase-img imga"></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Web Development Bootcamp:</h2>
-          <p class="lead mb-0">12 week 600hr immersive Accelerated Development Program with core studies in: HTML, CSS, Javascript, Git, Github, ReactJS, NodeJS, Express, MongoDB, and Axios.</p>
+          <h2>Fully Responsive Design</h2>
+          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
         </div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img imgb"></div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h2>Cincinnati Travel Capstone Project:</h2>
-          <p class="lead mb-0">This site was created focusing on the MERN stack. It incorporates MongoDB - Express - ReactJS - NodeJS, and is fully responsive and optimized for mobile devices. The user is able to write and display entries from MongoDB. Contact submissions are entered into a seperate MongoDB. </p>
+          <h2>Updated For Bootstrap 4</h2>
+          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
         </div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 order-lg-2 text-white showcase-img imgc" ></div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Cincinnati's Technology Corridor:</h2>
-          <p class="lead mb-0">With the opening of the 1819 Innovation Hub, Cincinnati entered the national dialogue in Technology. The Cincinnati Technology Corridor is being hailed as a new capitol of Tech in the Midwest. As Students we were extremely lucky to recieve our education in this amazing and exciting environment. </p>
+          <h2>Easy to Use &amp; Customize</h2>
+          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
         </div>
       </div>
     </div>
@@ -95,20 +106,27 @@ export default class about extends Component {
 
   <section class="testimonials text-center bg-light">
     <div class="container">
-      <h2 class="mb-5">The Students Behind This Project...</h2>
+      <h2 class="mb-5">What people are saying...</h2>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="cj img-fluid rounded-circle mb-3" src={eleven} alt=""/>
-            <h5>Connor Twele</h5>
-            <p class=" mb-0">"My dad can build anything he can think of with two hands and some tools. I can build websites with two hands and Visual Studios Code, Google, and StackOverflow"</p>
+            <img class="img-fluid rounded-circle mb-3" src={ten} alt=""/>
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
           </div>
         </div>
-        <div class="col-lg-6 us">
-          <div class="testimonial-item mx-auto mb-5 mb-lg-0  ">
-            <img class="cj img-fluid rounded-circle mb-3" src={twelve} alt=""/>
-            <h5>Jamie Schifrin</h5>
-            <p class=" mb-0">"Starting a second chapter in life as a Web Developer."</p>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src={eleven} alt=""/>
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img class="img-fluid rounded-circle mb-3" src={twelve} alt=""/>
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
           </div>
         </div>
       </div>
@@ -117,13 +135,23 @@ export default class about extends Component {
 
 
   <section class="call-to-action text-white text-center">
+    <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4"></h2>
+          <h2 class="mb-4">Ready to get started? Sign up now!</h2>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email..."/>
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

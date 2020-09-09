@@ -2,50 +2,76 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Nav, Dropdown, dropdown, NavDropdown  } from 'react-bootstrap';
-import Navbar from 'react-bootstrap/Navbar'
-import './navigationbar.css';
+import { Nav, Navbar, Dropdown, dropdown, NavDropdown  } from 'react-bootstrap';
 
+const Styles = styled.div`
+  .navbar {
+    background-color: CornflowerBlue;
+    
+
+  }
+  a, .navbar-brand, .navbar-nav .nav-link {
+    color: black;
+    &:hover {
+      color: white;
+    }
+
+    
+  }
+
+  #basic-nav-dropdown a {
+    color: blue;
+    font-weight: bold;
+    background-color: red;
+}
+
+
+`;
 
 export default class NavigationBar extends Component {
     render() {
         return (
             <div>
-               
-               <nav class="navbar navbar-expand-lg navbar-light fixed-top test3">
-                 <Navbar expand="lg" bg="" variant='light'>
-                    <a class="navbar-brand test3 text-white" href="#">Cincinnati Lifestyle</a>
+                <Styles>
+                    <Navbar expand="lg" >
+                    <Navbar.Brand href="/">CINCYLIFESTYLE.COM</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav " />
-                    <Navbar.Collapse id=" mr-auto ">
-                        <Nav className="ml-auto ">                                                   
-                        <Nav.Item >
+                    <Navbar.Collapse id="basic-navbar-nav ">
+                        <Nav className="ml-auto">                        
+                            
+                        <Nav.Item>
                             <Nav.Link>
-                            <Link className="text-white" to="/">Home</Link>
+                            <Link to="/">Home</Link>
                             </Nav.Link>
-                        </Nav.Item >
-                        <NavDropdown title={ <span className="text-white">Attractions</span>} id="basic-nav-dropdown" >
-                                <NavDropdown.Item href="/attractions">View Attraction</NavDropdown.Item>
-                                <NavDropdown.Item href="/add">Add Attractions</NavDropdown.Item>
+                        </Nav.Item>
+                        <NavDropdown title="Attractions" id="basic-nav-dropdown " >
+                                <NavDropdown.Item href="/attractions">Add Attraction</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">View Attractions</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                             </NavDropdown>
                         <Nav.Item>
                             <Nav.Link>
-                            <Link className="text-white" to="/about">About</Link>
+                            <Link to="/about">About</Link>
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link>
-                            <Link className="text-white" to="/contact">Contact</Link>
+                            <Link to="/contact">Contact</Link>
                             </Nav.Link>
                         </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link>
+                            <Link to="/blog">Blog</Link>
+                            </Nav.Link>
+                        </Nav.Item>
+                        
                         </Nav>
                     </Navbar.Collapse>
                     </Navbar>
-            </nav>
-             
+                </Styles >
             </div>
         )
     }
 }
-
-
-

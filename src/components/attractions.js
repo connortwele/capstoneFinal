@@ -1,36 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import "bootstrap/dist/css/bootstrap.min.css";
-import './style/attractions.css'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import  Navbar  from "./navigationbar"
-
 // Single Exercise Component
 const Attraction = (props) => {
   return (
-    <div>
-    <Navbar/>
-    <div className="">
-    <Card className="attractionsCard" style={{  }}>
-      <Card.Img className="cardImage" variant="top" src={props.attraction.imageURL} />
-      <Card.Body>
-        <Card.Title className="text-center">{props.attraction.name}</Card.Title>
-        {/* <Button variant="secondary" block> */}
-        <Card.Text className="text-center">
-          <Link className="text-center text-dark"to={"/attractions/" + props.attraction._id}>Learn More</Link>
-        </Card.Text>
-        {/* </Button> */}
-        <Card.Text className="text-center">
-          <a  className="text-dark" href= {props.attraction.website}>Website</a>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-    </div>
-    </div>
+    <tr>
+      <td>{props.attraction.name}</td>
+      <td>{props.attraction.description}</td>
+      <td><a href= {props.attraction.website} >Website</a></td>
+      <td>
+        <Link to={"/attractions/" + props.attraction._id}>learn more</Link>|{" "}
+        {/* <a
+        href="#"
+        onClick={() =>{props.deleteAttraction(props.attraction._id)}}
+        >
+          delete
+        </a> */}
+      </td>
+    </tr>
   )
 }
+// ExerciseList Component
 export default class ExercisesList extends Component {
   constructor(props){
     super(props)
@@ -60,11 +50,21 @@ export default class ExercisesList extends Component {
   }
   render() {
     return (
-      <div className ="attractionsContainer">
-        <h3 className="text-center attractionsHeader">Attractions</h3>
-        <div className="attractionsInnerContainer">
+      <div>
+        <h3>Logged Exercises</h3>
+        <table className="table">
+          <thead className="thead-light">
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Website</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
             {this.exerciseList()}
-        </div>
+          </tbody>
+        </table>
       </div>
     )
   }
