@@ -17,7 +17,6 @@ connection.once('open',()=>{
 })
 const attractionsRouter = require('./routes/attractions')
 const contactsRouter = require('./routes/contacts')
-app.use(serveStatic(path.join(__dirname, 'build')));
 app.use('/attractions', attractionsRouter)
 app.use('/contact', contactsRouter)
 routes(app);
