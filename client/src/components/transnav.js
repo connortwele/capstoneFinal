@@ -49,8 +49,8 @@ $(window).scroll(function() {
                             </Nav.Link>
                         </Nav.Item >
                         <NavDropdown title={ <span className="text-white">Attractions</span>} id="basic-nav-dropdown" >
-                                <NavDropdown.Item href="/attractions">View Attraction</NavDropdown.Item>
-                                <NavDropdown.Item href="/add">Add Attractions</NavDropdown.Item>
+                                <NavDropdown.Item href="/viewattractions">View Attraction</NavDropdown.Item>
+                                <NavDropdown.Item href="/addattractions">Add Attractions</NavDropdown.Item>
                             </NavDropdown>
                         <Nav.Item>
                             <Nav.Link>
