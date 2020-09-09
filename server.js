@@ -19,9 +19,9 @@ const attractionsRouter = require('./routes/attractions')
 const contactsRouter = require('./routes/contacts')
 app.use('/attractions', attractionsRouter)
 app.use('/contact', contactsRouter)
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/build/index.html'));
-  });
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '/client/build/index.html'));
+//   });
 app.listen(port, ()=>{
     console.log(`server is running on port: ${port}`)
 })
