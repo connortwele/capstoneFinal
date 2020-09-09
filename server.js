@@ -17,11 +17,13 @@ connection.once('open',()=>{
 })
 const attractionsRouter = require('./routes/attractions')
 const contactsRouter = require('./routes/contacts')
+app.use(serveStatic(path.join(__dirname, 'build')));
 app.use('/attractions', attractionsRouter)
 app.use('/contact', contactsRouter)
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, '/client/build/index.html'));
-//   });
+routes(app);
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.listen(port, ()=>{
     console.log(`server is running on port: ${port}`)
 })
