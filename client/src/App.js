@@ -28,10 +28,10 @@ export default class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route path="/attractions" exact component={Attractions} />
-            <Route path="/add" exact component={Addattractions} />
+            <Route path="/viewattractions" exact component={Attractions} />
+            <Route path="/addattractions" exact component={Addattractions} />
             <Route path="/blog" component={Blog} />
-            <Route path="/attractions/:id" exact component={singleAttraction} />
+            <Route path="/viewattractions/:id" exact component={singleAttraction} />
             <Route component={NoMatch} />
           </Switch>
         <Footer/>
