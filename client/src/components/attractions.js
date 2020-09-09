@@ -20,7 +20,7 @@ const Attraction = (props) => {
         <Card.Title className="text-center">{props.attraction.name}</Card.Title>
         {/* <Button variant="secondary" block> */}
         <Card.Text className="text-center">
-          <Link className="text-center text-dark"to={"/attractions/" + props.attraction._id}>Learn More</Link>
+          <Link className="text-center text-dark"to={"/viewattractions/" + props.attraction._id}>Learn More</Link>
         </Card.Text>
         {/* </Button> */}
         <Card.Text className="text-center">
