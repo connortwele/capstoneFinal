@@ -3,6 +3,7 @@ import axios from 'axios'
 import "bootstrap/dist/css/bootstrap.min.css";
 import  Navbar  from "./navigationbar"
 import './style/addAttraction.css'
+import {BACKEND_URL} from '../config'
 export default class addAttraction extends Component {
   constructor (props){
     super(props)
@@ -112,7 +113,7 @@ export default class addAttraction extends Component {
       // likes: this.state.likes
     }
     console.log(attraction)
-    axios.post('http://localhost:5000/attractions/add', attraction)
+    axios.post(BACKEND_URL + 'add', attraction)
     .then((res)=>{
       console.log(res.data)
     })

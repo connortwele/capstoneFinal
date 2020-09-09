@@ -6,6 +6,7 @@ import './style/attractions.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import  Navbar  from "./navigationbar"
+import {BACKEND_URL} from '../config'
 
 // Single Exercise Component
 const Attraction = (props) => {
@@ -39,7 +40,7 @@ export default class ExercisesList extends Component {
     };
   }
   componentDidMount(){
-    axios.get('http://localhost:5000/attractions/')
+    axios.get(BACKEND_URL + 'attractions/')
       .then(response => {
         this.setState({
           attractions: response.data

@@ -3,6 +3,7 @@ import axios from 'axios';
 import './style/contact.css'
 import  Navbar  from "./navigationbar"
 import clock from '../assets/utone.jpg'
+import {BACKEND_URL} from '../config'
 export default class contact extends Component {
   constructor (props){
     super(props)
@@ -39,7 +40,7 @@ export default class contact extends Component {
       question: this.state.question,
     }
     console.log(contact)
-    axios.post('http://localhost:5000/contact/add', contact)
+    axios.post(BACKEND_URL + 'contact/add', contact)
     .then((res)=>{
       console.log(res.data)
     })

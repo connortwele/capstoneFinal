@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from "axios";
 import './style/singleAttraction.css'
 import  Navbar  from "./navigationbar"
+import {BACKEND_URL} from '../config'
 
 export default class EditAttraction extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ export default class EditAttraction extends Component {
     }
   }
   componentDidMount() {
-    axios.get("http://localhost:5000/attractions/" + this.props.match.params.id)
+    axios.get(BACKEND_URL + "attractions/" + this.props.match.params.id)
     .then((response) => {
       this.setState({
         name: response.data.name,
