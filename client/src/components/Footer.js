@@ -40,7 +40,7 @@ const FooterPage = () => {
             <li><a target="_blank" href="https://github.com/connortwele">Github</a></li>
             <li><a target="_blank" href="https://connortwele.github.io/portfolio/">Porfolio</a></li>
             <li><a target="_blank" href="https://connortwele.github.io/petStoreProject/">Pet Store</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/connor-twele-7388481b0/">Linkden</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/connor-twele-7388481b0/">LinkedIn</a></li>
           </ul>
         </div>
         
@@ -53,7 +53,7 @@ const FooterPage = () => {
             <li><a target="_blank" href="https://github.com/jamieschifrin">Github</a></li>
             <li><a target="_blank" href="https://jamieschifrin.github.io/portfolio/">Portfolio</a></li>
             <li><a target="_blank" href="https://jamieschifrin.github.io/petStore/">Pet Store</a></li>
-            <li><a target="_blank" href="https://www.linkedin.com/in/jamie-schifrin-a70bb81b1/">Linkden</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/jamie-schifrin-a70bb81b1/">LinkedIn</a></li>
           </ul>
         </div>
 
