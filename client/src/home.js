@@ -214,7 +214,7 @@ export default class home extends Component {
                             <h2 class="text-white mb-3 meetteam">Meet Our Team</h2>
                            
                             <p class="para-1">Located in The University of Cincinnati's 1819 Innovation Hub, The Kable Academy offers Accelerated Learning Opportunities in both Network Security and Web Development.</p>
-                             <a href="/about">just a Click away</a>
+                             <a href="/about">just a click away</a>
                         </div>
                         <div class="col-md-7 ">
                             <img src={kable} alt="book and glasses"  align="right" id="btmpic1"/>

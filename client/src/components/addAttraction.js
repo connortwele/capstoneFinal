@@ -118,7 +118,7 @@ export default class addAttraction extends Component {
       console.log(res.data)
     })
     window.alert('Thank you for your contribution')
-    window.location="/attractions"
+    window.location="/viewattractions"
     console.log(attraction)
   }
   render() {
